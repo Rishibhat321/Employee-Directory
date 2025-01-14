@@ -29,4 +29,16 @@ public class EmployeeDAOImpl implements EmployeeDAO{
         return theEmployees;
     }
 
+    @Override
+    public Employee findById(int theId) {
+        // retrieve employee by id
+        Employee theEmployee = entityManager.find(Employee.class, theId);
+
+        if(theEmployee==null) {
+            throw new RuntimeException("Employee id - " + theId + " not found");
+        }
+
+        return theEmployee;
+    }
+
 }
