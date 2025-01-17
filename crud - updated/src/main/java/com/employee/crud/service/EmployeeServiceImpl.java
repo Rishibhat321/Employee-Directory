@@ -41,5 +41,23 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeDAO.deleteById(theId);
     }
 
+    @Override
+    public List<Employee> findByDepartment(String department) {
+        List<Employee> theEmployees = employeeDAO.findByDepartment(department);
+        return theEmployees;
+    }
+
+    @Override
+    public List<Employee> findByLocation(String location) {
+        List<Employee> theEmployees = employeeDAO.findByLocation(location);
+        return theEmployees;
+    }
+
+    @Override
+    public List<Employee> findByEmail(String email) {
+        List<Employee> theEmployees = employeeDAO.findByEmail(email);
+        return theEmployees;
+    }
+
 
 }
