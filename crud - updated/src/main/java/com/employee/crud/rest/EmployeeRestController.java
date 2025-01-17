@@ -69,6 +69,21 @@ public class EmployeeRestController {
         return "Deleted Employee Id - " + theId;
     }
 
+    @GetMapping("/employees/department/{theDepartment}")
+    public List<Employee> findByDepartment(@PathVariable String theDepartment) {
+        return employeeService.findByDepartment(theDepartment);
+
+    }
+
+    @GetMapping("/employees/location/{theLocation}")
+    public List<Employee> findByLocation(@PathVariable String theLocation) {
+        return employeeService.findByLocation(theLocation);
+    }
+
+    @GetMapping("/employees/email/{theEmail}")
+    public List<Employee> findByEmail(@PathVariable String theEmail) {
+        return employeeService.findByEmail(theEmail);
+    }
 
 
 }
