@@ -15,5 +15,11 @@ public interface EmployeeDAO extends JpaRepository<Employee,Integer> {
 
     void deleteById(int theId);
 
+    List<Employee> findByDepartment(String department);
+
+    List<Employee> findByLocation(String location);
+
+    List<Employee> findByEmail(String email);
+
 
 }
