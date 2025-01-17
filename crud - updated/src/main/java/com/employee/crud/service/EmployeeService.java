@@ -14,4 +14,11 @@ public interface EmployeeService {
 
     void deleteById(int theId);
 
+    List<Employee> findByDepartment(String department);
+
+    List<Employee> findByLocation(String location);
+
+    List<Employee> findByEmail(String email);
+
+
 }
